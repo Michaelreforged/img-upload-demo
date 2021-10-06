@@ -6,6 +6,9 @@ import FilePondPluginImageExifOrientation from "filepond-plugin-image-exif-orien
 import FilePondPluginImagePreview from "filepond-plugin-image-preview";
 import "filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css";
 import {Image} from "semantic-ui-react"
+import ImageUpload from "../Components/ImageUpload";
+
+registerPlugin(FilePondPluginImageExifOrientation, FilePondPluginImagePreview);
 
 
 export default function Home() {
@@ -30,7 +33,6 @@ export default function Home() {
   }
 
   const fileChanged = (fileItems) => {
-    console.log(fileItems[0].file);
     setFiles(fileItems)
   };
 
@@ -54,7 +56,7 @@ export default function Home() {
       />
         <button type="submit">add</button>
       </form>
-
+      <ImageUpload/>
       <Image src={url}></Image>
     </div>
   );
