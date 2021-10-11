@@ -6,5 +6,5 @@ Rails.application.routes.draw do
     get "users/:id", to: "users#show"
     put "users/:id", to: "users#update"
   end
-
+  get"*other", to: "static#index"
 end
