@@ -10,7 +10,7 @@ export default function Components() {
   const history = useHistory();
   return (
     <div>
-      {authenticated && history.location.pathname == "/protectedcomponents" ? <h1>Protected Components</h1>:<h1>Components</h1>}
+      {authenticated && history.location.pathname === "/protectedcomponents" ? <h1>Protected Components</h1>:<h1>Components</h1>}
       <LoadingIndicator/>
       <ErrorMsg/>
     </div>
